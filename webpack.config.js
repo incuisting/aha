@@ -8,6 +8,12 @@ module.exports = {
     filename: '[name].[hash].js',
     path: path.resolve('./dist')
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    host: 'localhost',
+    compress: true,
+    port: 8080
+  },
   module: {
     rules: [
       {
