@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
@@ -30,7 +31,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ],
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src')
       },
@@ -52,6 +63,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
       filename: 'index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css', //打包入口文件
+      chunkFilename: '[id].css' //用来打包import('module')方法中引入的模块
     })
   ]
 }
