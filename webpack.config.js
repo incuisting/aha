@@ -33,6 +33,18 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src')
+      },
+      {
+        test: /\.(jpg|png|bmp|gif|svg|ttf|woff|woff2|eot)/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              //小于这个大小的图片会变成base64 格式
+              limit: 4096
+            }
+          }
+        ]
       }
     ]
   },
