@@ -10,10 +10,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
     host: 'localhost',
     compress: true,
-    port: 8080
+    port: 8080,
+    open: true
   },
   module: {
     rules: [
@@ -26,7 +26,6 @@ module.exports = {
             plugins: ['transform-decorators-legacy']
           }
         },
-        include: path.join(__dirname, 'src'),
         exclude: /node_modules/
       },
       {
