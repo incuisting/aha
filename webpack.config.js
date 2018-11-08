@@ -46,6 +46,40 @@ module.exports = {
         include: path.resolve(__dirname, 'src')
       },
       {
+        test: /\.less/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
+          'less-loader'
+        ]
+      },
+      {
+        test: /\.scss/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.(jpg|png|bmp|gif|svg|ttf|woff|woff2|eot)/,
         use: [
           {
