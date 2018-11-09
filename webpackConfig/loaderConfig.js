@@ -29,7 +29,8 @@ module.exports = {
         },
         {
           ...cssLoader
-        }
+        },
+        'postcss-loader'
       ],
       exclude: /node_modules/,
       include: path.resolve(__dirname, '../src')
@@ -45,6 +46,7 @@ module.exports = {
         {
           ...cssLoader
         },
+        'postcss-loader',
         'less-loader'
       ]
     },
@@ -59,6 +61,7 @@ module.exports = {
         {
           ...cssLoader
         },
+        'postcss-loader',
         'sass-loader'
       ]
     },
