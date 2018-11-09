@@ -3,3 +3,8 @@
   transform: rotate(120deg);
   font-size: 100px;
 }
+.baidu {
+  height: 100px;
+  width: 100px;
+  background-image: url('../1.jpg');
+}

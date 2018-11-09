@@ -72,7 +72,7 @@ module.exports = {
           loader: 'url-loader',
           options: {
             //小于这个大小的图片会变成base64 格式
-            limit: 4096
+            limit: 8192
           }
         }
       ]
