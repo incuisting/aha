@@ -12,9 +12,9 @@ module.exports = {
   },
   devServer: {
     host: 'localhost',
-    compress: true,
     port: 8080,
-    open: true
+    open: true,
+    contentBase: path.resolve(__dirname, 'public')
   },
   module: {
     rules: loaderRules
