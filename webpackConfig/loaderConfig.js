@@ -3,7 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const cssLoader = {
   loader: 'css-loader',
   options: {
-    modules: true
+    modules: true,
+    localIdentName: '[path][name]__[local]--[hash:base64:5]'
   }
 }
 
@@ -27,10 +28,7 @@ module.exports = {
           loader: MiniCssExtractPlugin.loader
         },
         {
-          loader: 'css-loader',
-          options: {
-            modules: true
-          }
+          ...cssLoader
         }
       ],
       exclude: /node_modules/,
@@ -45,10 +43,7 @@ module.exports = {
           loader: MiniCssExtractPlugin.loader
         },
         {
-          loader: 'css-loader',
-          options: {
-            modules: true
-          }
+          ...cssLoader
         },
         'less-loader'
       ]
@@ -62,10 +57,7 @@ module.exports = {
           loader: MiniCssExtractPlugin.loader
         },
         {
-          loader: 'css-loader',
-          options: {
-            modules: true
-          }
+          ...cssLoader
         },
         'sass-loader'
       ]
