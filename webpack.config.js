@@ -8,7 +8,8 @@ module.exports = {
   },
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   devServer: {
     host: 'localhost',
@@ -26,8 +27,8 @@ module.exports = {
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css', //打包入口文件
-      chunkFilename: '[id].css' //用来打包import('module')方法中引入的模块
+      filename: 'css/[name].css', //打包入口文件
+      chunkFilename: 'css/[id].css' //用来打包import('module')方法中引入的模块
     })
   ]
 }
