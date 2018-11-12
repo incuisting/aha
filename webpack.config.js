@@ -14,7 +14,8 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     open: true,
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: path.resolve(__dirname, 'public'),
+    historyApiFallback: true
   },
   module: {
     rules: loaderRules
