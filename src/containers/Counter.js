@@ -1,10 +1,14 @@
 import React from 'react'
-
-const Counter = () => {
+import { connect } from 'react-redux'
+const Counter = props => {
+  console.log('props', props)
   return (
     <div>
-      <p>counter</p>
+      <p>0</p>
+      <button>+</button>
+      <button>-</button>
     </div>
   )
 }
-export default Counter
+
+export default connect()(Counter)
