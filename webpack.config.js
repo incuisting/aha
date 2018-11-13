@@ -18,6 +18,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true
   },
+  devtool: 'source-map',
   module: {
     rules: loaderRules
   },
