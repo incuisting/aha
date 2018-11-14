@@ -14,6 +14,11 @@ module.exports = {
   module: {
     rules: loaderRules
   },
+  resolve: {
+    alias: {
+      utils: path.resolve(__dirname, 'src/utils')
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
