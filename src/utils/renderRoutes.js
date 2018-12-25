@@ -1,5 +1,5 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 function renderRoutes(routes, extraProps = {}, switchProps = {}) {
   return routes ? (
@@ -10,17 +10,16 @@ function renderRoutes(routes, extraProps = {}, switchProps = {}) {
           path={route.path}
           exact={route.exact}
           strict={route.strict}
-          render={props =>
-            route.render ? (
-              route.render({ ...props, ...extraProps, route: route })
-            ) : (
-              <route.component {...props} {...extraProps} route={route} />
-            )
+          render={props => (route.render ? (
+            route.render({ ...props, ...extraProps, route })
+          ) : (
+            <route.component {...props} {...extraProps} route={route} />
+          ))
           }
         />
       ))}
     </Switch>
-  ) : null
+  ) : null;
 }
 
-export default renderRoutes
+export default renderRoutes;
