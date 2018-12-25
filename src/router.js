@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router, Route, Link, Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import renderRoutes from 'utils/renderRoutes';
 import App from './components/App';
 import Counter from './containers/Counter';
@@ -11,13 +9,13 @@ const routeConfig = [
   {
     path: '/',
     component: App,
-    exact: true,
+    exact: true
   },
   {
     path: '/counter',
     component: Counter,
-    exact: true,
-  },
+    exact: true
+  }
 ];
 
 export default () => (

@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --config webpack.dev.js"
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "lint": "eslint --ext .js src",
+    "pretty": "prettier --end-of-line lf ./src/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -31,23 +33,25 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.10.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-pxtorem": "^4.0.1",
     "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.24.0",
-    "webpack-api-mocker": "^1.5.16",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4"
+    "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "mini-css-extract-plugin": "^0.4.4",
+    "webpack-api-mocker": "^1.5.16",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack-merge": "^4.1.4",
+    "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",

@@ -1,7 +1,8 @@
-const merge = require('webpack-merge')
-const common = require('./webpack.common.js')
-const path = require('path')
-const apiMocker = require('webpack-api-mocker')
+const merge = require('webpack-merge');
+const path = require('path');
+const apiMocker = require('webpack-api-mocker');
+const common = require('./webpack.common.js');
+
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
@@ -10,9 +11,9 @@ module.exports = merge(common, {
     open: true,
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true,
-    before: function(app, server) {
-      apiMocker(app, path.resolve(__dirname, 'mock/api.js'))
+    before: (app) => {
+      apiMocker(app, path.resolve(__dirname, 'mock/api.js'));
     }
   },
   devtool: 'source-map'
-})
+});

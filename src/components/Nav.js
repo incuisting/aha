@@ -1,16 +1,16 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
   <ul>
     <li>
       <NavLink to="/" activeClassName="home">
-          home
+        home
       </NavLink>
     </li>
     <li>
       <NavLink to="/counter" activeClassName="counter">
-          counter
+        counter
       </NavLink>
     </li>
   </ul>

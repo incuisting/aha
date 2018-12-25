@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 const Link = ({ active, children, onClick }) => (
   <button
+    type="button"
     onClick={onClick}
     disabled={active}
     style={{
-      marginLeft: '4px',
+      marginLeft: '4px'
     }}
   >
     {children}
@@ -15,6 +16,6 @@ const Link = ({ active, children, onClick }) => (
 Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 export default Link;

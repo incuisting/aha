@@ -1,11 +1,11 @@
 export default {
   increment: () => ({
-    type: 'INCREMENT',
+    type: 'INCREMENT'
   }),
   decrement: () => ({
-    type: 'DECREMENT',
+    type: 'DECREMENT'
   }),
   incrementAsync: () => ({
-    type: 'INCREMENT_ASYNC',
-  }),
+    type: 'INCREMENT_ASYNC'
+  })
 };

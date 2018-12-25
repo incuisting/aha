@@ -1,7 +1,8 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { loaderRules } = require('./webpackConfig/loaderConfig')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { loaderRules } = require('./webpackConfig/loaderConfig');
+
 module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src/index.js')
@@ -25,8 +26,8 @@ module.exports = {
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css', //打包入口文件
-      chunkFilename: 'css/[id].css' //用来打包import('module')方法中引入的模块
+      filename: 'css/[name].css', // 打包入口文件
+      chunkFilename: 'css/[id].css' // 用来打包import('module')方法中引入的模块
     })
   ]
-}
+};

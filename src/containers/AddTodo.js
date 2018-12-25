@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addTodo } from '../actions';
 
 const AddTodo = ({ dispatch }) => {
@@ -16,10 +17,17 @@ const AddTodo = ({ dispatch }) => {
           input.value = '';
         }}
       >
-        <input ref={node => (input = node)} />
+        <input
+          ref={(node) => {
+            input = node;
+          }}
+        />
         <button type="submit">Add Todo</button>
       </form>
     </div>
   );
+};
+AddTodo.propTypes = {
+  dispatch: PropTypes.func.isRequired
 };
 export default connect()(AddTodo);
