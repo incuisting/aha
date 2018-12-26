@@ -71,7 +71,6 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.2",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack-api-mocker": "^1.5.16",
     "webpack-merge": "^4.1.4"
   }
 }
