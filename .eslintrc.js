@@ -28,7 +28,6 @@ module.exports = {
   },
   //全局变量提示
   globals: {
-    document: false,
-    utils: false
+    document: false
   }
 };
