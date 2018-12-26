@@ -20,7 +20,9 @@ module.exports = {
     ],
     'object-curly-newline': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'import/no-unresolved': 0
+    'import/no-unresolved': 0,
+    'eslint linebreak-style': [0, 'error', 'windows'],
+    'linebreak-style': 0
   },
   env: {
     browser: true,
