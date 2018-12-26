@@ -9,9 +9,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
-    "lint": "eslint --ext .js src",
-    "pq": "pretty-quick -staged",
-    "ls": "lint-staged"
+    "lint": "eslint --ext .js src"
   },
   "husky": {
     "hooks": {
