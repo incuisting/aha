@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const path = require('path');
-const apiMocker = require('webpack-api-mocker');
+const apiMocker = require('mocker-api');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {

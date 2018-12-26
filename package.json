@@ -42,6 +42,7 @@
     "husky": "^1.2.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "mocker-api": "^1.6.6",
     "node-sass": "^4.10.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.15.3",

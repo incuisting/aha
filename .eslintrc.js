@@ -22,7 +22,8 @@ module.exports = {
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'import/no-unresolved': 0,
     'eslint linebreak-style': [0, 'error', 'windows'],
-    'linebreak-style': 0
+    'linebreak-style': 0,
+    'import/no-extraneous-dependencies': 0
   },
   env: {
     browser: true,

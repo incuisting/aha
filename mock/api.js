@@ -3,5 +3,5 @@ const proxy = {
     userId: 1,
     userName: 'aha'
   }
-}
-module.exports = proxy
+};
+module.exports = proxy;
