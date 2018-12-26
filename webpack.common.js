@@ -5,7 +5,7 @@ const { loaderRules } = require('./webpackConfig/loaderConfig');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, 'src/index.js')
+    main: ['@babel/polyfill', path.resolve(__dirname, 'src/index.js')]
   },
   output: {
     filename: '[name].[hash].js',
