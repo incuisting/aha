@@ -76,3 +76,15 @@
 └─webpackConfig //webapck 配置生成文件
         loaderConfig.js // loader配置生成文件
 ```
+
+## 样式怎么写
+
+由于开启了 css module 的选项,所以可以把 css/less/scss 像模块一样  
+`import style from './xxx.less'`  
+引入进来以后可以用  
+`style.xxx`  
+访问对象里方法名的方式渠道 className,可以参考`src/components/App.js`这个文件中的用法.
+
+## 数据 mock
+
+mock 接口的配置文件,接口的配置方法可以参考插件文档https://github.com/jaywcjlove/mocker-api/tree/master
