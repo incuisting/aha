@@ -25,7 +25,7 @@ module.exports = {
     'import/no-unresolved': 0,
     'eslint linebreak-style': [0, 'error', 'windows'],
     'linebreak-style': 0,
-    'import/no-extraneous-dependencies': 0
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
   },
   env: {
     browser: true,
