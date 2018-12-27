@@ -92,3 +92,4 @@ mock 接口的配置文件,接口的配置方法可以参考插件文档https://
 ## TODO
 
 - 路由基于装饰器模式去配置
+  (举个例子： @route(<path>,<configration>可选)
