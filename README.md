@@ -88,3 +88,7 @@
 ## 数据 mock
 
 mock 接口的配置文件,接口的配置方法可以参考插件文档https://github.com/jaywcjlove/mocker-api/tree/master
+
+## TODO
+
+- 路由基于装饰器模式去配置
