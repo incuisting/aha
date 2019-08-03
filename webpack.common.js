@@ -17,6 +17,7 @@ module.exports = {
     rules: loaderRules
   },
   resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       utils: path.resolve(__dirname, 'src/utils')
     }
