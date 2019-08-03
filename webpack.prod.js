@@ -1,6 +1,8 @@
 const merge = require('webpack-merge');
 const UglifyJSplugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
+const manifest = require('./dist/vendors.manifest.json');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -15,5 +17,10 @@ module.exports = merge(common, {
       }),
       new OptimizeCssAssetsWebpackPlugin({})
     ]
-  }
+  },
+  plugins: [
+    new webpack.DllReferencePlugin({
+      manifest
+    })
+  ]
 });
