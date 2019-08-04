@@ -10,7 +10,7 @@ module.exports = {
     // 开头引入 polyfill以解决saga 引入时的一个generateruntime 的一个报错
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: 'src/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
@@ -32,7 +32,7 @@ module.exports = {
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css', // 打包入口文件
+      filename: 'src/css/[name].css', // 打包入口文件
       chunkFilename: 'css/[id].css' // 用来打包import('module')方法中引入的模块
     }),
     new webpack.HotModuleReplacementPlugin()
