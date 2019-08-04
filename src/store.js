@@ -5,7 +5,13 @@ import rootReducer from './reducers';
 import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
-const middleware = [sagaMiddleware, logger];
+let middleware = [sagaMiddleware];
+
+if (process.env.NODE_ENV !== 'production') {
+  middleware = [...middleware, logger];
+} else {
+  middleware = [...middleware];
+}
 const store = createStore(rootReducer, applyMiddleware(...middleware));
 sagaMiddleware.run(rootSaga);
 export default store;
