@@ -41,7 +41,10 @@ module.exports = merge(common, {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['!dll/*'],
+      cleanAfterEveryBuildPatterns: ['!dll/*']
+    }),
     new webpack.DllReferencePlugin({
       manifest
     })
