@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import counterActions from '../actions/counter';
+import counterActions from 'actions/counter';
 
 const Counter = (props) => {
   const { increment, decrement, incrementAsync, counter } = props;

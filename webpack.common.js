@@ -20,7 +20,10 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      utils: path.resolve(__dirname, 'src/utils')
+      utils: path.resolve(__dirname, 'src/utils'),
+      actions: path.resolve(__dirname, 'src/actions'),
+      components: path.resolve(__dirname, 'src/components'),
+      containers: path.resolve(__dirname, 'src/containers')
     }
   },
   plugins: [

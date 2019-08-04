@@ -28,23 +28,17 @@ module.exports = merge(common, {
       automaticNameDelimiter: '~',
       name: true,
       cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
+        common: {
+          name: 'common',
+          chunks: 'initial',
+          priority: 2,
+          minChunks: 2
         }
       }
     }
   },
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['!dll/*'],
-      cleanAfterEveryBuildPatterns: ['!dll/*']
-    }),
+    new CleanWebpackPlugin(),
     new webpack.DllReferencePlugin({
       manifest
     })
