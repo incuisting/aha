@@ -2,7 +2,8 @@ const merge = require('webpack-merge');
 const UglifyJSplugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
-const manifest = require('./dist/vendors.manifest.json');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const manifest = require('./dist/dll/vendors.manifest.json');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -16,9 +17,31 @@ module.exports = merge(common, {
         sourceMap: true // 生成sourceMap映射文件
       }),
       new OptimizeCssAssetsWebpackPlugin({})
-    ]
+    ],
+    splitChunks: {
+      chunks: 'async',
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new webpack.DllReferencePlugin({
       manifest
     })
