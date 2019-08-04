@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { loaderRules } = require('./webpackConfig/loaderConfig');
@@ -30,6 +31,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css', // 打包入口文件
       chunkFilename: 'css/[id].css' // 用来打包import('module')方法中引入的模块
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };

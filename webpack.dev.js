@@ -9,6 +9,7 @@ module.exports = merge(common, {
     host: 'localhost',
     port: 8080,
     open: true,
+    hot: true,
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true,
     before: (app) => {
