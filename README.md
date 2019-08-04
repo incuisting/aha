@@ -37,6 +37,6 @@ Webpack 配置上支持了,React 全家桶,TypeScript 的支持,打包时提取 
 mock 接口的配置文件,接口的配置方法可以参考插件文档https://github.com/jaywcjlove/mocker-api/tree/master
 
 ## TODO
-
+- happypack
 - cli
 - 易用性的优化
